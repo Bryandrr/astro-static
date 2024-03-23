@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
+  <link rel="shortcut icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+ background: #242424;
+  color: white;
+	font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+        a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0039a6;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+        transition-duration: 0.30s;
+}
+    a.button:hover {
+  width: px;
+padding: 15px;
+  background-color: #0066b2;
+      border-radius: 5px;
+}
+    img {
+       border-radius: 25px;
+  padding: 20px;
+  width: 200px;
+  height: px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+    }
+    .input {
+  border: none;
+  background: black;
+  width: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  color: var(--text-secondary);
+}
+    .imgbtn {
+	width: 75px;
+	height: 75px;
+	border-radius: 10px;
+}
+
+	.btn {
+		border-radius: 15px;
+		margin-top: 10px;
+		background: transparent;
+		text-align: center;
+		width: 100px;
+		height: 30px;
+		border-style: solid;
+		-webkit-transition: 0.5s all ease;
+		transition: 0.5s ease all;
+	}
+.navbtn {
+	background: darkblue;
+	display: inline;
+	border-width: 0px;
+	width: 200px;
+	height: 45px;
+	color: white;
+}
+.navbtn-selected {
+	background: darkgreen;
+	display: inline;
+	border-width: 0px;
+	width: 200px;
+	height: 45px;
+	color: white;
+}
+.navbtn:hover {
+	cursor: pointer;
+}
+
+	.btn:hover {
+		background: white;
+		cursor: pointer;
+	}
+	imgbtn:hover {
+		background: white;
+		cursor: pointer;
+	}
+  </style>
+</head>
+<body>
+<a class="button" href="/">Back</a>
+  <div align="center">
+    <h1>Settings</h1>
+  <div class="buttons">
+    <input id="title" class="input" placeholder="Title" onkeyup="setTitle(this.value)">
+    <input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())">
+    <button class="btn" onclick="resetTab()">Reset</button>
+  </div>
+	  <button onclick="ab()" class="btn">About:Blank</button>
+</body>
+  <script src="js/settings.js"></script>
+    <script src="js/settings2.js"></script>
+  <script src="js/ab.js"></script>
+</html>
