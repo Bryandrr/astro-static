@@ -8,11 +8,11 @@ body {
 }
 .form__input {
     background: #351E4F;
-    font-family: inherit;
+    font-family: 'Be Vietnam Pro', sans-serif;
     padding: 0px 17px;
     height: 48px;
     border: 1px solid #68419b;
-    color: var(--text-color);
+    color: white;
     border-radius: 3px;
     outline: none;
     width: 900px;
