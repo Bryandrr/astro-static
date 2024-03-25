@@ -3,7 +3,7 @@ body {
   background: #2B1C3D;
 	color: white;
   font-family: 'Be Vietnam Pro', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
 }
 .form__input {
