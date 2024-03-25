@@ -16,6 +16,7 @@
   .container {
   position: relative;
   width: 300px; /* Adjust width as needed */
+    transition: 1s;
 }
 
 img {
@@ -34,6 +35,11 @@ img {
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
+}
+
+.container:hover {
+     transform: scale(1.1);
+         box-shadow: 0 0 1vw purple;
 }
 
 </style>
