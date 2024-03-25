@@ -13,9 +13,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <style>
+  .search {
+    justify-content: center;
+  }
   .container {
   position: relative;
-  width: 250px; /* Adjust width as needed */
+  width: 250px; 
     transition: 1s;
     border-radius: 15px;
 }
@@ -76,7 +79,7 @@ settings
   <img src="astro.png" alt="Image">
   <div class="text">Text at the bottom</div>
 </div>
-<div align="center">
+<div align="center" class="search">
     <button class="btn" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://google.com');">Google</button>
     <button class="btn" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://youtube.com');">Youtube</button>
     <button class="btn" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://tiktok.com');">Tiktok</button>
