@@ -12,6 +12,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
+  .container {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #702963; /* Semi-transparent black background */
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+</style>
 </head>
 <body>
   <div align="center">
@@ -40,6 +64,10 @@ settings
 </span> Settings</a>
 <h2>Quick Search:</h2>
   </center>
+  <div class="container">
+  <img src="your-image-url.jpg" alt="Image">
+  <div class="text">Text at the bottom</div>
+</div>
 <div align="center">
     <button class="btn" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://google.com');">Google</button>
     <button class="btn" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://youtube.com');">Youtube</button>
@@ -48,7 +76,7 @@ settings
     <button class="btn" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://discord.com/login');">Discord</button>
 
 <button class="btn" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://jmw.algebrashelper.com');">Jordansmathwork</button>
-    <h6><p>© <a href="https://dsc.gg/gnetwork">Galactic Network</a> 2023</p></h6>
+    <h6><p>© <a style="color: purple;" href="https://dsc.gg/gnetwork">Galactic Network</a> 2023</p></h6>
 </body>
   <script>
     // script to generate random greetings
