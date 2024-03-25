@@ -7,19 +7,40 @@
       @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap');
       font-family: 'Be Vietnam Pro', sans-serif;
     }
+    .loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 8px solid #9c27b0; /* Purple color */
+  border-top: 8px solid #ffffff; /* White color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform:
+
   </style>
   <script>
-    window.onload = function() {
-      window.location.href = "/static/"; // Replace with your desired URL
-    };
+    // Function to redirect after 5 seconds
+setTimeout(function() {
+  window.location.href = "/static/"; // Replace "https://example.com" with the URL you want to redirect to
+}, 5000); // 5000 milliseconds = 5 seconds
+
   </script>
 </head>
-<body style="background: #161625;">
+<body style="background: #2B1C3D;">
   <center>
   <h1>Loading...</h1>
   </center>
-  <div align="center">
-    <img class="centered" src="loading.gif" alt="">
-  </div>
+  <div class="loader-container">
+  <div class="loader"></div>
+</div>
 </body>
 </html>
