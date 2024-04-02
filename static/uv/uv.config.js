@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/static/astro/',
-    bare:'https://math-english-sci.vercel.app/',
+    bare:'https://bare.alegithomeworksite.online/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/static/uv/uv.handler.js',
