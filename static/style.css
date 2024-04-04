@@ -79,3 +79,6 @@ form input:focus {
 .navbar a:hover {
   transform: scale(1.1);
 }
+.material-symbols-outlined {
+  font-size: 15px;
+}
