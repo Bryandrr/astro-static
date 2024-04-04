@@ -60,7 +60,6 @@ form input:focus {
 }
 .main {
   background-color: transparent;
-  border: 1px solid #fffafa;
   margin-bottom: 10px;
   border-radius: 10px;
   display: flex;
@@ -80,4 +79,8 @@ form input:focus {
   display: flex;
   justify-content: center;
   flex-grow: 1;
+}
+.navlink {
+	color: white;
+	float: right;
 }
