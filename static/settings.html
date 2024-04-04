@@ -98,6 +98,12 @@ padding: 15px;
 		background: white;
 		cursor: pointer;
 	}
+	    .toggle-btn {
+        background-color: #5d3fd3;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -109,8 +115,26 @@ padding: 15px;
     <input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())">
     <button class="btn" onclick="resetTab()">Reset</button>
   </div>
+	  <center>
+		  <h1>History Hider Toggles</h1>
+	  </center>
 	  <button onclick="ab()" class="btn">History Hider</button>
 	  <button onclick="buffedAB()" class="btn">Buffed History Hider</button>
+         <button id="toggleBtn" class="toggle-btn">Auto About:Blank</button>
+<script>
+    const script = document.createElement('script');
+    script.src = '/static/js/autoab.js';
+
+    document.getElementById('toggleBtn').addEventListener('click', function () {
+        if (script.parentNode) {
+            script.parentNode.removeChild(script);
+            console.log('Script removed');
+        } else {
+            document.head.appendChild(script);
+            console.log('Script added');
+        }
+    });
+</script>
 </body>
   <script src="js/settings.js"></script>
     <script src="js/settings2.js"></script>
