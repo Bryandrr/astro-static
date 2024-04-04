@@ -62,6 +62,7 @@ form input:focus {
   background-color: #333;
   overflow: hidden;
   border-radius: 10px;
+	margin: 14px;
 }
 
 .navbar a {
