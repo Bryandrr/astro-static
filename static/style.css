@@ -69,6 +69,7 @@ form input:focus {
   margin-right: 10px;
   bottom: -4%;
 }
+
 .leftnavbar {
   margin-right: auto;
   margin-left: 10px;
@@ -80,7 +81,23 @@ form input:focus {
   justify-content: center;
   flex-grow: 1;
 }
+
 .navlink {
-	color: white;
-	float: right;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  border-radius: 15px;
+  padding: 10px;
+  transition: 0.3s;  
+  box-shadow: 1px -1px 11px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px -1px 11px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px -1px 11px 0px rgba(0,0,0,0.75);
+  margin-right: 10px;
+}
+
+.navlink:hover {
+  background-color: black;
+  color: white;
+  scale: 1.05;
+  border-radius: 3px;
 }
