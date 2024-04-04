@@ -58,3 +58,38 @@ form input:focus {
 	cursor: pointer;
 	background: white;
 }
+    .navbar {
+        background-color: #6a0dad; /* Purple background color */
+        padding: 10px 20px; /* Add padding to the navbar */
+        display: flex; /* Make the navbar items inline */
+        justify-content: space-between; /* Align navbar items evenly */
+        align-items: center; /* Center the items vertically */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to the navbar */
+    }
+
+    .navbar-brand {
+        color: #fff; /* White text color */
+        font-size: 24px;
+        text-decoration: none; /* Remove underline from the text */
+    }
+
+    .navbar-nav {
+        list-style-type: none; /* Remove bullet points from the list */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Make the navbar items inline */
+    }
+
+    .nav-item {
+        margin-left: 20px; /* Add space between navbar items */
+    }
+
+    .nav-link {
+        color: #fff; /* White text color */
+        text-decoration: none; /* Remove underline from the text */
+        font-size: 18px;
+    }
+
+    .nav-link:hover {
+        text-decoration: underline; /* Add underline on hover */
+    }
