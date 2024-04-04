@@ -8,6 +8,7 @@
   <link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
   <link rel="shortcut icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
   <link rel="stylesheet" href="style.css">
+	  <script src="https://kit.fontawesome.com/a70619ef6c.js" crossorigin="anonymous"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
@@ -19,7 +20,7 @@ body {
         a.button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0039a6;
+  background-color: purple;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -101,7 +102,7 @@ padding: 15px;
   </style>
 </head>
 <body>
-<a class="button" href="/">Back</a>
+<a class="button" href="/static/"><i class="fa-solid fa-chevron-left"></i> Back</a>
   <div align="center">
     <h1>Settings</h1>
   <div class="buttons">
@@ -109,7 +110,8 @@ padding: 15px;
     <input id="icon" class="input" placeholder="Favicon" onkeyup="setFavicon(this.value.trim())">
     <button class="btn" onclick="resetTab()">Reset</button>
   </div>
-	  <button onclick="ab()" class="btn">About:Blank</button>
+	  <button onclick="ab()" class="btn">History Hider</button>
+	  <button onclick="buffedAB()" class="btn">Buffed History Hider</button>
 </body>
   <script src="js/settings.js"></script>
     <script src="js/settings2.js"></script>
