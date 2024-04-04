@@ -70,3 +70,14 @@ form input:focus {
   margin-right: 10px;
   bottom: -4%;
 }
+.leftnavbar {
+  margin-right: auto;
+  margin-left: 10px;
+  bottom: -4%;
+}
+
+.centernavbar {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
