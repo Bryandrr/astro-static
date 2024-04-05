@@ -32,7 +32,7 @@ body {
     color: #FFF;
 }
  form input::placeholder {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Be Vietnam Pro', sans-serif;
       color: white;
     }
 form input:focus {
