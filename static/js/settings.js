@@ -16,7 +16,7 @@ if (tabData.icon) {
 }
 
 var settingsDefaultTab = {
-  title: "Settings",
+  title: "Astro | Settings",
   icon: "/static/astro.png",
 };
 
