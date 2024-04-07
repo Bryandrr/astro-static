@@ -2,7 +2,7 @@
 </p>
 
 <h1 align="center"><strong>Astro</strong></h1>
-<p align="center">T</p>
+<p align="center">A completely static site!</p>
 
 ### Features:
 - 200+ games
