@@ -1,4 +1,4 @@
-var cacheName = 'Astro Unblocker';
+var cacheName = 'Astro';
 var filesToCache = [
   '/js/sw.js'
 ];
