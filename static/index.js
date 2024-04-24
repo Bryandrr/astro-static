@@ -11,14 +11,6 @@ const address = document.getElementById("uv-address");
  * @type {HTMLInputElement}
  */
 const searchEngine = document.getElementById("uv-search-engine");
-/**
- * @type {HTMLParagraphElement}
- */
-const error = document.getElementById("uv-error");
-/**
- * @type {HTMLPreElement}
- */
-const errorCode = document.getElementById("uv-error-code");
 
 function help() {
     document.getElementById('address').value = __protocoller$config.protocol+__protocoller$config.suffix+__protocoller$config.helpURI;
