@@ -8,6 +8,7 @@
     <title>IFrame Example</title>
     <style>
       #iframe-container {
+          background-color:black;
     display: none;
     position: fixed;
     top: 50%;
@@ -21,7 +22,7 @@
 
 #iframe {
     border: none;
-    width: 500px;
+    width: 1000px;
     height: 80vh;
 }
 
@@ -44,6 +45,7 @@
     <div id="iframe-container">
         <iframe src="/static/" id="iframe"></iframe>
         <button id="close-iframe-btn">Close</button>
+                <button id="close-iframe-btn">Fullscreen</button>
     </div>
 
     <script>
