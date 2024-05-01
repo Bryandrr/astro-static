@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame Example</title>
+    <style>
+      #iframe-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#iframe {
+    width: 80%;
+    height: 80vh;
+}
+
+#close-iframe-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+    <button id="open-iframe-btn">Open IFrame</button>
+    <div id="iframe-container">
+        <iframe sr="https://www.example.com" id="iframe"></iframe>
+        <button id="close-iframe-btn">Close</button>
+    </div>
+
+    <script>
+      document.getElementById('open-iframe-btn').addEventListener('click', function() {
+    document.getElementById('iframe-container').style.display = 'block';
+});
+
+document.getElementById('close-iframe-btn').addEventListener('click', function() {
+    document.getElementById('iframe-container').style.display = 'none';
+});
+
+    </script>
+</body>
+
+</html>
