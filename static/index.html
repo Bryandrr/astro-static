@@ -13,7 +13,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/a70619ef6c.js" crossorigin="anonymous"></script>
   <script>
-    alert("If it says not found, search something up then reload and try again.")
+(function(bwin){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = bwin || {};
+s.src = "\/\/enviousinevitable.com\/bfXZVVsJd.GMlm0PYGWid\/iaYBWM5tuZZCXjIR\/oecm\/9tu\/ZQUulgkvPRT-UjzjMXzYEIy\/NXz\/UEteNKT\/MnzQMpTHIN3gNDgD";
+s.async = true;
+l.parentNode.insertBefore(s, l);
+})({})
+(function(suukavh){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = suukavh || {};
+s.src = "\/\/enviousinevitable.com\/b.X\/VssEd\/GplZ0BY\/Wvct\/Mehmf9\/uhZvUwlakrPtTGUazSMazpEfyKNQj\/UttjNcT-MdzPMnTlI\/2iNbgH";
+s.async = true;
+l.parentNode.insertBefore(s, l);
+})({})
+(function(jda){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = jda || {};
+s.src = "\/\/enviousinevitable.com\/a\/Wy5xw.YNWPdOlaQv2v9ZkVZ\/Tu9W6yb-2-5elNSGW\/QJ9xNxTZMGzSMXTVIK2GMSyc0N1RM-zJMLxjM\/jjYv0r";
+s.async = true;
+l.parentNode.insertBefore(s, l);
+})({})
 </script>
 <style>
   .image {
@@ -58,7 +84,17 @@ a.link:hover {
   box-shadow: 0 0 1vw purple;
   margin: 15px;
 }
-  
+      #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid #333;
+        z-index: 9999;
+    }
   </style>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z5YJ5D06G"></script>
@@ -69,6 +105,7 @@ a.link:hover {
 
   gtag('config', 'G-0Z5YJ5D06G');
 </script>
+  
 </head>
 <body>
   <div class="navbar">
@@ -104,6 +141,51 @@ a.link:hover {
           </div>
       </div>
     <br>
+<div id="popup">
+<h1>Ads have been added so we can add more domains. they may be very intrusive for some.</h1>
+<h2>If you dont want this, use an adblocker.</h2>
+</div>
+
+<script>
+    // Function to set a cookie
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    // Function to check if a cookie exists
+    function getCookie(cname) {
+        const name = cname + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    // Function to show the pop-up only if the cookie doesn't exist
+    function checkPopup() {
+        const popup = document.getElementById('popup');
+        if (getCookie('popupShown') === '') {
+            // Show the pop-up
+            popup.style.display = 'block';
+            // Set a cookie to indicate the pop-up has been shown
+            setCookie('popupShown', 'true', 30); // Cookie expires in 30 days
+        }
+    }
+
+    // Call the function to check if the pop-up should be shown
+    checkPopup();
+</script>
   <div align="center" id="quick-search">
        <a class='link button' href='#' onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://google.com');"><img height="175"
         src="google.png" class="image"
