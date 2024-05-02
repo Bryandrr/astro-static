@@ -21,11 +21,17 @@
  .image-container {
   display: flex;
 }
+        .image-container:hover {
+            background-color: #333;
+        }
 
 .image-wrapper {
   position: relative;
   margin-right: 20px; /* Adjust spacing between images */
 }
+      .image-wrapper:hover {
+           background-color: #333;
+      }  
 
 .overlay-text {
   position: absolute;
@@ -34,16 +40,11 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-        background-color: #222;
 }
 
 .image-wrapper:hover .overlay-text {
   opacity: 1;
-    background-color: #222;
 }
-        image-wrapper:hover {
-            background-color: #333;
-        }
     </style>
 </head>
 <body>
