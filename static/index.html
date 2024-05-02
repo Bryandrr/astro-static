@@ -146,8 +146,6 @@ a.link:hover {
     cursor: pointer;
 }
   #back {
-    position: absolute;
-    padding: 5px 10px;
     background: #333;
     color: white;
     border: none;
@@ -289,11 +287,10 @@ a.link:hover {
     </div>
 </body>
           <script>
-          var iframe = document.getElementById("iframe");
-
-      backButton.addEventListener('click', () => {
-            window.history.back();
-          });
+            function back() {
+      var web = document.getElementById("iframe");
+      web.contentWindow.history.back();
+    }
         </script>
   <script>
     // script to generate random greetings
