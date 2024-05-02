@@ -18,7 +18,7 @@
      height: 150px;
      border-radius:10px;
         }
- .image-container {
+.image-container {
   display: flex;
 }
 
@@ -26,9 +26,6 @@
   position: relative;
   margin-right: 20px; /* Adjust spacing between images */
 }
-      .image-wrapper:hover {
-           background-color: #333;
-      }  
 
 .overlay-text {
   position: absolute;
@@ -36,13 +33,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-    color: purple;
-    transition: overlay 0.5s;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .image-wrapper:hover .overlay-text {
   opacity: 1;
-    transform: scale(1.1);
 }
     </style>
 </head>
