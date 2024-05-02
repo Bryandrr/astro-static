@@ -10,8 +10,9 @@
   <link rel="shortcut icon" href="astro.png" />
   <link rel="stylesheet" href="/static/style.css">
     <style>
-        .space {
-            align-items: center;
+        .container {
+                display: flex;
+    justify-content: center; /* Centers items horizontally */
         }
     .card-container {
       margin-top: 50px;
@@ -117,6 +118,7 @@
               <img src="/pages/gfiles/images/rblx.png" />
             </div>
           </a>
+        </div>
     <script>
       document.getElementById('open-iframe-btn').addEventListener('click', function() {
     document.getElementById('iframe-container').style.display = 'block';
