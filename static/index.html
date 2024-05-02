@@ -286,14 +286,14 @@ a.link:hover {
         <br>
         <iframe src="/static/assets/" id="iframe"></iframe>
         <button id="close-iframe-btn">Close</button>
-        <button id="back">Close</button>
-                <button id="fc" class="fcn">Fullscreen</button>
+        <button id="back">Back</button>
+                <button id="fc" class="fcn" onclick="toggleFullscreen()">Fullscreen</button>
     </div>
 </body>
           <script>
           var iframe = document.getElementById("fc");
 
-      c   backButton.addEventListener('click', () => {
+      backButton.addEventListener('click', () => {
             window.history.back();
           });
         </script>
