@@ -10,118 +10,41 @@
   <link rel="shortcut icon" href="astro.png" />
   <link rel="stylesheet" href="/static/style.css">
     <style>
-        .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers items vertically */
-    align-items: center; /* Centers items horizontally */
-    height: 100vh; /* Optionally set the height of the container */
-        }
-    .card-container {
-      margin-top: 50px;
-      margin-bottom: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 950px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+ .image-container {
+  display: flex;
+}
 
-    .apps-card {
-      width: 100px;
-      height: 100px;
-      border-radius: 5px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-       transition: all 0.5s;
-      border: 2px solid transparent;
-    }
+.image-wrapper {
+  position: relative;
+  margin-right: 20px; /* Adjust spacing between images */
+}
 
-    .apps-card:hover {
-       transform: rotate(-10deg) scale(1.3);
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      border-color: #ffffff;
-    }
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
 
-    .apps-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .apps-card .content {
-      box-sizing: border-box;
-      width: 100%;
-      position: absolute;
-      padding-bottom: 0px;
-      height: auto;
-      bottom: 0;
-      background-color: black;
-      color: white;
-    }
-
-    .apps-card .title {
-      font-size: 15px;
-      color: white;
-      text-align: center;
-      margin: 0;
-      display: none;
-    }
-
-    .apps-card:hover .title {
-      display: block;
-    }
-        .apps-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .apps-list a {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px;
-      border-radius: 5px;
-      background-color: black;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 20px;
-      transition: background-color 0.3s ease;
-    }
-
-    .apps-list a:hover {
-      background-color: black;
-    }
+.image-wrapper:hover .overlay-text {
+  opacity: 1;
+}
     </style>
 </head>
-
 <body>
-    <div class="space">
         <h1>Astro | G<wbr>a<wbr>mes</h1>
-      
-            <div class="container">
-        <div class="card-container">
-           <a href="#" onclick="roblox()">
-            <div class="apps-card">
-              <div class="content">
-                <p class="title">Roblox</p>
-              </div>
-              <img src="/pages/gfiles/images/rblx.png" />
-            </div>
-          </a>
-        <div class="card-container">
-           <a href="#" onclick="roblox()">
-            <div class="apps-card">
-              <div class="content">
-                <p class="title">Roblox</p>
-              </div>
-              <img src="/pages/gfiles/images/rblx.png" />
-            </div>
-          </a>
-        </div>
+    <div class="image-container">
+  <div class="image-wrapper">
+    <img onclick="window.location.href='./src/basketbros'" src="././images/basketbros-io.jpg" class="image">
+    <div class="overlay-text">BasketBros</div>
+  </div>
+  <div class="image-wrapper">
+    <img onclick="window.location.href='./src/basketball-stars'" src="././images/src/basketball-stars.png" class="image">
+    <div class="overlay-text">Basketball Stars</div>
+  </div>
+</div>
     <script>
       document.getElementById('open-iframe-btn').addEventListener('click', function() {
     document.getElementById('iframe-container').style.display = 'block';
