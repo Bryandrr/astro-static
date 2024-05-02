@@ -10,6 +10,9 @@
   <link rel="shortcut icon" href="astro.png" />
   <link rel="stylesheet" href="/static/style.css">
     <style>
+        .space {
+            justify-content:center;
+        }
         img {
                  width: 150px;
      height: 150px;
@@ -35,11 +38,12 @@
 
 .image-wrapper:hover .overlay-text {
   opacity: 1;
+    background: #222;
 }
     </style>
 </head>
 <body>
-    <div align="center">
+    <div align="center" class="space">
         <h1>Astro | G<wbr>a<wbr>mes</h1>
     <div class="image-container">
   <div class="image-wrapper">
@@ -51,6 +55,7 @@
     <div class="overlay-text">Basketball Stars</div>
   </div>
 </div>
+    </div>
     <script>
       document.getElementById('open-iframe-btn').addEventListener('click', function() {
     document.getElementById('iframe-container').style.display = 'block';
