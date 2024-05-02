@@ -103,7 +103,7 @@ a.link:hover {
     }
         #iframe-container {
           justify-content: center;
-          background-color: #222;
+          background-color: purple;
           border-radius: 15px;
     display: none;
     position: fixed;
@@ -151,6 +151,13 @@ a.link:hover {
     border: none;
     cursor: pointer;
 }
+  #forward {
+    align-items:center;
+     background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
   </style>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z5YJ5D06G"></script>
@@ -283,15 +290,21 @@ a.link:hover {
         <iframe src="/static/assets/"  class="fcn" id="web"></iframe>
         <button id="close-iframe-btn">Close</button>
                 <button id="fc" onclick="toggleFullscreen()">Fullscreen</button>
-                <button id="back">Back</button>
+                <button onclick="goBack()" id="back">Back</button>
+        <button onclick="goForward()" id="forward">Forward</button>
     </div>
 </body>
-          <script>
-            function back() {
-      var web = document.getElementById("web");
-      web.contentWindow.history.back();
-    }
-        </script>
+         <script>
+function goBack() {
+    var iframe = document.getElementById('web');
+    iframe.contentWindow.history.back();
+}
+
+function goForward() {
+    var iframe = document.getElementById('web');
+    iframe.contentWindow.history.forward();
+}
+</script>
   <script>
     // script to generate random greetings
 
