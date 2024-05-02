@@ -145,6 +145,16 @@ a.link:hover {
     border: none;
     cursor: pointer;
 }
+  #back {
+    position: absolute;
+    top: 10px;
+    float: center;
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
   </style>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z5YJ5D06G"></script>
@@ -190,7 +200,19 @@ a.link:hover {
 <h2>If you dont want this, use an adblocker.</h2>
   <h4>Click <a href="/static/index.html" style="text-decoration:none;color:purple;">here</a> if you want to close this popup.</h4>
 </div>
+ <script>
+          function toggleFullscreen() {
+            let elem = document.querySelector('.fcn');
 
+            if (!document.fullscreenElement) {
+              elem.requestFullscreen().catch((err) => {
+                alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+              });
+            } else {
+              document.exitFullscreen();
+            }
+          }
+ </script>
 <script>
     // Function to set a cookie
     function setCookie(cname, cvalue, exdays) {
@@ -264,9 +286,17 @@ a.link:hover {
         <br>
         <iframe src="/static/assets/" id="iframe"></iframe>
         <button id="close-iframe-btn">Close</button>
-                <button id="fc">Fullscreen</button>
+        <button id="back">Close</button>
+                <button id="fc" class="fcn">Fullscreen</button>
     </div>
 </body>
+          <script>
+          var iframe = document.getElementById("fc");
+
+      c   backButton.addEventListener('click', () => {
+            window.history.back();
+          });
+        </script>
   <script>
     // script to generate random greetings
 
