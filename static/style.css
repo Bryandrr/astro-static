@@ -92,7 +92,5 @@ form input:focus {
 
 #time {
   position: fixed;
-  right: 15px;
-  bottom: 15px;
   font-size: 20px;
 }
