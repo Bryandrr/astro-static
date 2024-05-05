@@ -96,9 +96,10 @@ form input:focus {
 }
 
 .section {
-	background-color: #7F00FF;
+	background-color: transparent;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px black;
+	width: 100px;
 }
