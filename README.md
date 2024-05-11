@@ -5,10 +5,11 @@
 <p align="center">A completely static site!</p>
 
 ### Features:
-- 200+ games
+- games
 - automatic about:blank system
 - Clean UI
 - chatting section for your 'friends'
+- fast loading speeds
 # Credits
 - <a href="//github.com/titaniumnetwork-dev/Ultraviolet">Titanium Network - Ultraviolet Proxy</a>
 # Deployment
