@@ -12,7 +12,7 @@
 - fast loading speeds
 # Credits
 - <a href="//github.com/titaniumnetwork-dev/Ultraviolet">Titanium Network - Ultraviolet Proxy</a>
-- <a href="//github.com/TheTIW/Ultraviolet-Static">TIW - Ultraviolet Modifier</a>
+- <a href="//github.com/TheTIW/UV-Static">TIW - Ultraviolet Modifier</a>
 # Deployment
 ## You are allowed to deploy to any static service. keep note, deploying to render is pretty risky
 <a target="_blank" href="https://heroku.com/deploy/?template=https://github.com/GalacticNetwork/astro-static"><img alt="Deploy to Heroku" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg"></a>
