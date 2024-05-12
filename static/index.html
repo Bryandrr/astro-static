@@ -243,7 +243,7 @@ a.link:hover {
     checkPopup();
 </script>
   <div align="center" id="quick-search">
-<a class="link button" href="#" id="open-iframe-btn"><img height="175" src="astro.png" class="image" width="175"><span class="span" style="padding:3px;margin:auto;display:block;width:170px;height:25px;line-height:25px;overflow:hidden;text-align:center;white-space:nowrap" alt="google">Astro Games unfinished</span></a>
+<a class="link button" href="#" id="open-iframe-btn"><img height="175" src="astro.png" class="image" width="175"><span class="span" style="padding:3px;margin:auto;display:block;width:170px;height:25px;line-height:25px;overflow:hidden;text-align:center;white-space:nowrap;width:fit-content;" alt="google">Astro Games unfinished</span></a>
         </div>
       <div id="iframe-container">
         <br>
@@ -266,52 +266,6 @@ function goForward() {
     iframe.contentWindow.history.forward();
 }
 </script>
-  <script>
-    function openNewTab(url, unblock) {
-    // Ensure URL has proper protocol
-    if (!url.startsWith('https://') && !url.startsWith('http://')) {
-        url = 'https://' + url;
-    }
-
-    // Apply custom URL encoding if unblock is true
-    if (unblock) {
-        url = window.location.origin + __uv$config.prefix + __uv$config.encodeUrl(url);
-    }
-
-    // Open a new tab
-    let newTab = window.open('about:blank', '_blank');
-
-    if (!newTab) {
-        // Handle popup blocker
-        window.alert('Popups Blocked...\nPlease allow popups!');
-    } else {
-        // Configure the new tab
-        const { document, location } = newTab;
-        document.body.style.margin = '0';
-        document.body.style.height = '100vh';
-        document.title = 'Home';
-
-        // Create and configure an iframe
-        let iframe = document.createElement('iframe');
-        iframe.style.cssText = 'border: none; width: 100vw; height: 100vh; margin: 0; overflow: hidden;';
-        iframe.referrerPolicy = 'no-referrer';
-        iframe.allowFullscreen = true;
-        iframe.src = url;
-        iframe.id = 'PlayIframe';
-
-        // Set favicon for the new tab
-        let favicon = document.createElement('link');
-        favicon.rel = 'icon';
-        favicon.href = '/Images/GoogleClassroom.png';
-
-        // Append iframe and favicon to the new tab
-        document.head.appendChild(favicon);
-        document.body.appendChild(iframe);
-    }
-
-    return newTab;
-}
-  </script>
   <script>
     // script to generate random greetings
 
