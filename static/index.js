@@ -1,5 +1,5 @@
-const form = = document.getElementById("uv-form");
-const uvaddress = = document.getElementById("uv-address");
+const form = document.getElementsByClassName('uv-form')[0];
+const input = document.getElementsByClassName('uv-address')[0];
 
 if (form && input) {
     form.addEventListener('submit', async event => {
@@ -11,4 +11,4 @@ if (form && input) {
         window.alert('If it does not work the first time click again!')
         openNewTab(window.location.origin.concat(__uv$config.prefix + __uv$config.encodeUrl(url)));
     });
-}}
+}
