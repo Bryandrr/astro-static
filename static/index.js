@@ -64,7 +64,6 @@ form.addEventListener("submit", async (event) => {
 
       doc.head.appendChild(link);
       doc.body.appendChild(iframe);
-      window.location.replace("https://google.com");
     }
   }
 }
