@@ -49,6 +49,14 @@
         left: 190px;
         color: white;
       }
+      .navbtn5 {
+        right: 10px;
+        color: white;
+      }
+      .navbtn6 {
+        right: 70px;
+        color: white;
+      }
     </style>
   </head>
 
@@ -69,6 +77,12 @@
           </button>
     <button id="inspect" onclick="erudaToggle()" class="navbtn navbtn4">
             <i class="fas fa-code"></i>
+          </button>
+     <button id="back" onclick="goBack()" class="navbtn navbtn5">
+           <i class="fa-solid fa-chevron-left"></i>
+          </button>
+     <button id="forward" onclick="goForward()" class="navbtn navbtn6">
+            <i class="fa-solid fa-chevron-right"></i>
           </button>
     <script>
       function reload() {
@@ -110,6 +124,21 @@
         iframe.src = encodedUrl
       }
     </script>
+<script>
+function goBack() {
+    var iframe = document.getElementById('iframeId');
+    if (iframe.contentWindow.history.length > 0) {
+        iframe.contentWindow.history.back();
+    }
+}
+
+function goForward() {
+    var iframe = document.getElementById('iframeId');
+    if (iframe.contentWindow.history.length > 0) {
+        iframe.contentWindow.history.forward();
+    }
+}
+</script>
       <script>
     function toggleFullscreen() {
       let elem = document.querySelector('.iframe');
