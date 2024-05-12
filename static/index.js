@@ -32,7 +32,8 @@ form.addEventListener("submit", async (event) => {
   }
 
   const url = search(address.value, searchEngine.value);
-  function abtblank(url) {
+location.href = function abtblank(url);
+function abtblank(url) {
   const width = window.innerWidth;
   const height = window.innerHeight;
 
@@ -64,6 +65,7 @@ form.addEventListener("submit", async (event) => {
 
       doc.head.appendChild(link);
       doc.body.appendChild(iframe);
+      window.location.replace("https://google.com");
     }
   }
 }
