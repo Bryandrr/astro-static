@@ -20,6 +20,14 @@
         width: 100vw;
       }
 
+      .research {
+        top: 20%;
+        left: 50%;
+        border-radius: 3px;
+border: solid 2px purple;
+      box-shadow: 0 0 10px purple;
+      }
+
       .navbtn {
         float: right;
         border-radius: 40px;;
@@ -64,6 +72,16 @@
     <script>
       window.addEventListener('resize', navigator.keyboard.lock(['Escape']))
     </script>
+                <div class="research">
+<form id="uv-form">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+            <input id="uv-address" type="text" placeholder="Be lazy and search here!" class="form__input"/>
+          </form>
+          <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+          </div>
+                </div>
     <iframe src="" class="iframe" id="iframeId" style="bottom: 0" style="border: 0px #ffffff none" name="Iframe" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
 
         <button onclick="reload()" class="navbtn navbtn1">
@@ -152,6 +170,12 @@ function goForward() {
       }
     }
   </script>
-    <script src="/assets/scripts/global.js?v=1"></script>
+       <script src="/static/uv/uv.bundle.js" defer></script>
+      <script src="/static/uv/uv.config.js" defer></script>
+      <script src="/static/register-sw.js" defer></script>
+      <script src="/static/search.js" defer></script>
+        <script src="/static/cloak.js" defer></script>
+      <script src="/static/index.js" defer></script>
+      <script src="/static/error.js" defer></script>
   </body>
 </html>
