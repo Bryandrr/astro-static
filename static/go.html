@@ -8,6 +8,7 @@
     <title id="dynamic-title">Home</title>
     <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap');
       body {
         margin: 0;
       }
@@ -23,14 +24,37 @@
       .research {
         top: 20%;
         left: 50%;
-        border-radius: 3px;
-border: solid 2px purple;
-      box-shadow: 0 0 10px purple;
+        justify-content:center;
       }
+
+      .form__input {
+    background: #351E4F;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    padding: 0px 17px;
+    height: 48px;
+    border: 1px solid #68419b;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+    width: 300px;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: #FFF;
+}
+ form input::placeholder {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      color: white;
+    }
+form input:focus {
+    border: 1px solid #7D29E8;
+    animation: fadeInAnimation ease-in-out 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
       .navbtn {
         float: right;
-        border-radius: 40px;;
+        border-radius: 40px;
         width: 50px;
         height: 50px;
         background-color: purple;
