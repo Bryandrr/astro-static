@@ -36,7 +36,7 @@
         url = "https://" + url;
 
       // Pass the encoded url to the second page
-      sessionStorage.setItem("encodedUrl", __uv$config.encodeUrl(url));
+         sessionStorage.setItem("ur", __uv$config.prefix + __uv$config.encodeUrl(url))
       location.href = "/static/go.html";
     });
 }
