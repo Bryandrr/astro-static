@@ -24,8 +24,7 @@ const errorCode = document.getElementById("uv-error-code");
 const input = document.querySelector("input");
 
 const swConfig = {
-  uv: { file: "/@/sw.js", config: __uv$config },
-  dynamic: { file: "/dynamic/sw.js", config: __dynamic$config },
+  uv: { file: "/static/uv.js" config: __uv$config },
 };
 function registerSW() {
   if (localStorage.getItem("registerSW") === "true") {
@@ -67,30 +66,10 @@ class crypts {
     );
   }
 }
-
-function search(input) {
-  input = input.trim();
-  const searchTemplate = localStorage.getItem("engine") || "https://google.com/search?q=%s";
-
-  try {
-    return new URL(input).toString();
-  } catch (err) {
-    try {
-      const url = new URL(`http://${input}`);
-      if (url.hostname.includes(".")) {
-        return url.toString();
-      }
-      throw new Error("Invalid hostname");
-    } catch (err) {
-      return searchTemplate.replace("%s", encodeURIComponent(input));
-    }
-  }
-}
 if ("serviceWorker" in navigator) {
   var proxySetting = localStorage.getItem("proxy") || "uv";
   let swConfig = {
-    uv: { file: "/@/sw.js", config: __uv$config },
-    dynamic: { file: "/dynamic/sw.js", config: __dynamic$config },
+    uv: { file: "/static/uv.js", config: __uv$config }
   };
 
   let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
@@ -123,8 +102,7 @@ function launch(val) {
   if ("serviceWorker" in navigator) {
     let proxySetting = localStorage.getItem("proxy") || "uv";
     let swConfig = {
-      uv: { file: "/@/sw.js", config: __uv$config },
-      dynamic: { file: "/dynamic/sw.js", config: __dynamic$config },
+      uv: { file: "/static/uv.js", config: __uv$config }
     };
 
     // Use the selected proxy setting or default to 'uv'
