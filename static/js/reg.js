@@ -1,32 +1,163 @@
-  function activate(value) {
-  let iframe = document.querySelector("#iframeId");
+"use strict";
 
-  window.navigator.serviceWorker
-    .register("/static/sw.js", {
-       sessionStorage.setItem("ur", __uv$config.prefix + __uv$config.encodeUrl(url))
-      scope: __uv$config.prefix,
+/**
+ * @type {HTMLFormElement}
+ */
+const form = document.getElementById("uv-form");
+/**
+ * @type {HTMLInputElement}
+ */
+const address = document.getElementById("uv-address");
+/**
+ * @type {HTMLInputElement}
+ */
+const searchEngine = document.getElementById("uv-search-engine");
+/**
+ * @type {HTMLParagraphElement}
+ */
+const error = document.getElementById("uv-error");
+/**
+ * @type {HTMLPreElement}
+ */
+const errorCode = document.getElementById("uv-error-code");
+
+const input = document.querySelector("input");
+
+const swConfig = {
+  uv: { file: "/@/sw.js", config: __uv$config },
+  dynamic: { file: "/dynamic/sw.js", config: __dynamic$config },
+};
+function registerSW() {
+  if (localStorage.getItem("registerSW") === "true") {
+    var proxySetting = localStorage.getItem("proxy") || "uv";
+    let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
+
+    navigator.serviceWorker
+      .register(swFile, { scope: swConfigSettings.prefix })
+      .then((registration) => {
+        console.log("ServiceWorker registration successful with scope: ", registration.scope);
+      })
+      .catch((error) => {
+        console.error("ServiceWorker registration failed:", error);
+      });
+  }
+}
+
+// crypts class definition
+class crypts {
+  static encode(str) {
+    return encodeURIComponent(
+      str
+        .toString()
+        .split("")
+        .map((char, ind) => (ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char))
+        .join("")
+    );
+  }
+
+  static decode(str) {
+    if (str.charAt(str.length - 1) === "/") {
+      str = str.slice(0, -1);
+    }
+    return decodeURIComponent(
+      str
+        .split("")
+        .map((char, ind) => (ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char))
+        .join("")
+    );
+  }
+}
+
+function search(input) {
+  input = input.trim();
+  const searchTemplate = localStorage.getItem("engine") || "https://google.com/search?q=%s";
+
+  try {
+    return new URL(input).toString();
+  } catch (err) {
+    try {
+      const url = new URL(`http://${input}`);
+      if (url.hostname.includes(".")) {
+        return url.toString();
+      }
+      throw new Error("Invalid hostname");
+    } catch (err) {
+      return searchTemplate.replace("%s", encodeURIComponent(input));
+    }
+  }
+}
+if ("serviceWorker" in navigator) {
+  var proxySetting = localStorage.getItem("proxy") || "uv";
+  let swConfig = {
+    uv: { file: "/@/sw.js", config: __uv$config },
+    dynamic: { file: "/dynamic/sw.js", config: __dynamic$config },
+  };
+
+  let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
+
+  navigator.serviceWorker
+    .register(swFile, { scope: swConfigSettings.prefix })
+    .then((registration) => {
+      console.log("ServiceWorker registration successful with scope: ", registration.scope);
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        let encodedUrl = swConfigSettings.prefix + crypts.encode(search(address.value));
+        sessionStorage.setItem("encodedUrl", encodedUrl);
+        const browseSetting = localStorage.getItem("browse");
+        const browseUrls = {
+          go: "/go",
+          norm: encodedUrl,
+        };
+
+        const urlToNavigate = browseUrls[browseSetting] || "/go";
+        location.href = urlToNavigate;
+      });
     })
-    .then(() => {
-      let url = value.trim();
-      if (!isUrl(url)) url = "https://www.google.com/search?q=" + url;
-      else if (!(url.startsWith("https://") || url.startsWith("http://")))
-        url = "https://" + url;
-
-      // Pass the encoded url to the second page
-         sessionStorage.setItem("ur", __uv$config.prefix + __uv$config.encodeUrl(url))
-      location.href = "/static/go.html";
+    .catch((error) => {
+      console.error("ServiceWorker registration failed:", error);
     });
 }
 
-function isUrl(str = "") {
-  var pattern = new RegExp(
-    "^(https?:\\/\\/)?" + // protocol
-      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-      "(\\#[-a-z\\d_]*)?$",
-    "i"
-  ); // fragment locator
-  return !!pattern.test(str);
+function launch(val) {
+  if ("serviceWorker" in navigator) {
+    let proxySetting = localStorage.getItem("proxy") || "uv";
+    let swConfig = {
+      uv: { file: "/@/sw.js", config: __uv$config },
+      dynamic: { file: "/dynamic/sw.js", config: __dynamic$config },
+    };
+
+    // Use the selected proxy setting or default to 'uv'
+    let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
+
+    navigator.serviceWorker
+      .register(swFile, { scope: swConfigSettings.prefix })
+      .then((registration) => {
+        console.log("ServiceWorker registration successful with scope: ", registration.scope);
+        let url = val.trim();
+        if (typeof ifUrl === "function" && !ifUrl(url)) {
+          url = search(url);
+        } else if (!(url.startsWith("https://") || url.startsWith("http://"))) {
+          url = "https://" + url;
+        }
+
+        let encodedUrl = swConfigSettings.prefix + crypts.encode(url);
+        sessionStorage.setItem("encodedUrl", encodedUrl);
+        const browseSetting = localStorage.getItem("browse");
+        const browseUrls = {
+          go: "/go",
+          norm: encodedUrl,
+        };
+        const urlToNavigate = browseUrls[browseSetting] || "/go";
+        location.href = urlToNavigate;
+      })
+      .catch((error) => {
+        console.error("ServiceWorker registration failed:", error);
+      });
+  }
+}
+
+function ifUrl(val = "") {
+  const urlPattern = /^(http(s)?:\/\/)?([\w-]+\.)+[\w]{2,}(\/.*)?$/;
+  return urlPattern.test(val);
 }
