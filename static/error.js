@@ -14,5 +14,7 @@ if (registerButton) {
       errorCode.textContent = err.toString();
       registerButton.classList.remove("show");
     }
+      const url = search(address.value, searchEngine.value);
+  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
   });
 };
