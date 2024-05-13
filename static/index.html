@@ -30,7 +30,7 @@
   let iframe = document.querySelector("#iframeId");
 
   window.navigator.serviceWorker
-    .register("/static/sw.js", {
+    .register("/static/uv.js", {
        sessionStorage.setItem("ur", __uv$config.prefix + __uv$config.encodeUrl(url))
       scope: __uv$config.prefix,
     })
