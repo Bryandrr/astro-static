@@ -7,6 +7,15 @@
     <link rel="shortcut icon" id="dynamic-favicon" href="https://ssl.gstatic.com/classroom/favicon.png" />
     <title id="dynamic-title">Home</title>
     <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/static/uv.js", {
+                    scope: __uv$config.prefix,
+                });
+            });
+        }
+    </script>
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&display=swap');
       body {
