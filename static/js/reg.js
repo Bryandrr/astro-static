@@ -24,7 +24,7 @@ const errorCode = document.getElementById("uv-error-code");
 const input = document.querySelector("input");
 
 const swConfig = {
-  uv: { file: "/static/uv.js" config: __uv$config },
+  uv: { file: "/static/js/sw.js" config: __uv$config },
 };
 function registerSW() {
   if (localStorage.getItem("registerSW") === "true") {
@@ -69,7 +69,7 @@ class crypts {
 if ("serviceWorker" in navigator) {
   var proxySetting = localStorage.getItem("proxy") || "uv";
   let swConfig = {
-    uv: { file: "/static/uv.js", config: __uv$config }
+    uv: { file: "/static/js/sw.js", config: __uv$config }
   };
 
   let { file: swFile, config: swConfigSettings } = swConfig[proxySetting];
@@ -123,7 +123,7 @@ function launch(val) {
         sessionStorage.setItem("encodedUrl", encodedUrl);
         const browseSetting = localStorage.getItem("browse");
         const browseUrls = {
-          go: "/go",
+          go: "/static/go.html",
           norm: encodedUrl,
         };
         const urlToNavigate = browseUrls[browseSetting] || "/go";
