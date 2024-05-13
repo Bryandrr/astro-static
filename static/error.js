@@ -15,6 +15,6 @@ if (registerButton) {
       registerButton.classList.remove("show");
     }
       const url = search(address.value, searchEngine.value);
-  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+  location.href = "/static/go.html";
   });
 };
