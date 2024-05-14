@@ -27,14 +27,19 @@
       <script>
       registerSW();
     </script>
-  <script>
-    
-  function activate(value) {
+          <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./uv.js", {
+                    scope: __uv$config.prefix,
+                });
+            });
+        }
+            function activate(value) {
   let iframe = document.querySelector("#iframeId");
 
   window.navigator.serviceWorker
-    .register("/static/uv.js", {
-       sessionStorage.setItem("ur", __uv$config.prefix + __uv$config.encodeUrl(url))
+    .register("/static/register-sw.js", {
       scope: __uv$config.prefix,
     })
     .then(() => {
@@ -61,8 +66,7 @@ function isUrl(str = "") {
   ); // fragment locator
   return !!pattern.test(str);
 }
-
-  </script>
+    </script>
 <style>
   .image {
   border-radius: 20px;
