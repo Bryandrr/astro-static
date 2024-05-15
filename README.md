@@ -10,6 +10,7 @@
 - Clean UI
 - chatting section for your 'friends'
 - fast loading speeds
+### astro static will be shut down soon, for a new version of astro with an actual VPS
 # Credits
 - <a href="//github.com/titaniumnetwork-dev/Ultraviolet">Titanium Network - Ultraviolet Proxy</a>
 - <a href="//github.com/TheTIW/UV-Static">TIW - Ultraviolet Modifier</a>
