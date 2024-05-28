@@ -1,6 +1,8 @@
 <p align="center"><img src="https://raw.githubusercontent.com/GalacticNetwork/astro-static/main/static/astro.png" height="200">
 </p>
 
+<h1><a href="//github.com/galacticnetwork/astro">Astro static (v5) has been archived, go to the new respritory.</a></h1>
+
 <h1 align="center"><strong>Astro</strong></h1>
 <p align="center">A completely static site!</p>
 
@@ -21,3 +23,4 @@
 <a target="_blank" href="https://app.netlify.com/start/deploy?repository=https://github.com/GalacticNetwork/astro-static"><img alt="Deploy to Netlify" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/netlify.svg"></a>
 <a target="_blank" href="https://vercel.com/new/clone?repository-url=https://github.com/GalacticNetwork/astro-static"><img alt="Deploy to Vercel" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg"></a>
 <a target="_blank" href="https://render.com/deploy?repo=https://github.com/GalacticNetwork/astro-static"><img alt="Deploy to Render" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/render.svg"></a>
+
